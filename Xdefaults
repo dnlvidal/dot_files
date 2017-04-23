@@ -1,0 +1,90 @@
+xterm*font: -windows-proggycleanszbp-medium-r-normal--13-80-96-96-c-70-iso8859-1
+xterm*vt100*geometry: 100x50
+
+xterm*foreground: rgb:ff/ff/ff
+xterm*background: rgb:00/00/00
+
+xterm*foreground:     #DDDDDD
+xterm*background:     #121212
+!black
+xterm*color0:         #353535
+xterm*color8:         #666666
+!red
+xterm*color1:         #AE4747
+xterm*color9:         #EE6363
+!!green
+xterm*color2:         #769441
+xterm*color10:        #5ACD32
+!xterm*color2:         #556B2F
+!xterm*color10:        #9ACD32
+!brown/yellow
+xterm*color3:         #D9AF43
+xterm*color11:        #E9D710
+!xterm*color3:         #DAA520
+!xterm*color11:        #FFC125
+!blue
+xterm*color4:         #6F99B4
+xterm*color12:        #7C96B0
+!magenta
+xterm*color5:         #8B7B8B
+xterm*color13:        #D8BFD8
+!cyan
+xterm*color6:         #A7A15E
+xterm*color14:        #F0E68C
+!white
+xterm*color7:         #DDDDDD
+xterm*color15:        #FFFFFF
+
+xterm*borderColor: #343434
+
+!xterm*background: #343434
+!xterm*foreground: #cdcdcd
+
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
+
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48
+
+xterm*saveLines: 2000
+
+xterm*foreground: rgb:ff/ff/ff
+xterm*background: rgb:00/00/00
+
+*term*foreground:     #DDDDDD
+*term*background:     #121212
+!black
+*term*color0:         #353535
+*term*color8:         #666666
+!red
+*term*color1:         #AE4747
+*term*color9:         #EE6363
+!!green
+*term*color2:         #556B2F
+*term*color10:        #9ACD32
+!brown/yellow
+*term*color3:         #DAA520
+*term*color11:        #FFC125
+!blue
+*term*color4:         #6F99B4
+*term*color12:        #7C96B0
+!magenta
+*term*color5:         #8B7B8B
+*term*color13:        #D8BFD8
+!cyan
+*term*color6:         #A7A15E
+*term*color14:        #F0E68C
+!white
+*term*color7:         #DDDDDD
+*term*color15:        #FFFFFF
+
+*term*borderColor: #343434
+
+!*term*background: #343434
+!*term*foreground: #cdcdcd
+
+*term*boldMode: false
+*term*colorBDMode: true
+*term*colorBD: rgb:fc/fc/fc
+
+
