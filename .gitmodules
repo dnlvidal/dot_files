@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/bundle/vcscommand.vim"]
+	path = vim/bundle/vcscommand.vim
+	url = https://github.com/vim-scripts/vcscommand.vim.git

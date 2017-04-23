@@ -2,29 +2,34 @@ execute pathogen#infect()
 set path+=**
 
 " ------------------------------------
-"   Plugins
+"   Plugins Settings
 " ------------------------------------
 "
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#branch#use_vcscommand = 1
 
 " ------------------------------------
 "  Layout/Display
 " ------------------------------------
 set number
-set relativenumber
+"set relativenumber
 set encoding=utf-8
 set cursorline
 
-set t_Co=256
+"set t_Co=256
 let g:solarized_termcolors=256
-let g:gruvbox_contrast_light='hard'
+"let g:gruvbox_contrast_light='hard'
 colorscheme solarized
 set background=light
 
