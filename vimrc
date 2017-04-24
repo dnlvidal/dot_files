@@ -19,6 +19,12 @@ set path+=**
 "let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#branch#use_vcscommand = 1
 
+"indent-guides
+let g:indent_guides_guide_size  = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_color_change_percent  = 3
+let g:indent_guides_enable_on_vim_startup = 1
+
 " ------------------------------------
 "  Layout/Display
 " ------------------------------------
@@ -36,7 +42,7 @@ set background=light
 "-- Editing
 set textwidth=100
 set ts=2
-set shiftwidth=2 
+set shiftwidth=2
 set smarttab
 set showmatch
 set scrolloff=5
@@ -46,11 +52,16 @@ au BufRead * set et|retab
 au BufRead makefile set noet|retab!
 au BufRead Makefile set noet|retab!
 
-
+if has('gui_running')
+  set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
+  let &showbreak = '↳'
+else
+  set list listchars=tab:>-,nbsp:.,trail:.,extends:>,precedes:<
+  let &showbreak = '^'
+endif
 if filereadable(".vimrc.proj")
   source .vimrc.proj
 endif
-
 
 " ------------------------------------
 "  Syntax/Completion

@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vcscommand.vim"]
 	path = vim/bundle/vcscommand.vim
 	url = https://github.com/vim-scripts/vcscommand.vim.git
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
