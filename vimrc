@@ -15,9 +15,12 @@ set path+=**
 "let g:syntastic_check_on_wq = 0
 
 "let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline#extensions#branch#use_vcscommand = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#branch#use_vcscommand = 1
+
+" load FZF plugin
+set rtp+=~/.fzf
 
 "indent-guides
 let g:indent_guides_guide_size  = 1
@@ -26,12 +29,15 @@ let g:indent_guides_color_change_percent  = 3
 let g:indent_guides_enable_on_vim_startup = 1
 
 " ------------------------------------
-"  Layout/Display
+"  Layout/Display/Editing
 " ------------------------------------
 set number
 "set relativenumber
 set encoding=utf-8
 set cursorline
+set textwidth=100
+set scrolloff=5
+set showmatch
 
 "set t_Co=256
 let g:solarized_termcolors=256
@@ -39,19 +45,26 @@ let g:solarized_termcolors=256
 colorscheme solarized
 set background=light
 
-"-- Editing
-set textwidth=100
-set ts=2
+" Indentation/TAB
+set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+set textwidth=100
 set smarttab
-set showmatch
-set scrolloff=5
-
 set autoindent
-au BufRead * set et|retab
-au BufRead makefile set noet|retab!
-au BufRead Makefile set noet|retab!
 
+" Expand tab to space by default
+au BufRead * set et
+
+" TAB expansion exceptions
+au BufRead makefile   set noet
+au BufRead Makefile   set noet
+au BufRead makefile.* set noet
+au BufRead Makefile.* set noet
+
+"--- special/invisible characters settings
+
+set list
 if has('gui_running')
   set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
   let &showbreak = '↳'
@@ -113,8 +126,7 @@ function! Smart_TabComplete()
     return "\<C-X>\<C-O>"         " plugin matching
   endif
 endfunction
-inoremap <tab> <c-r>=Smart_TabComplete()<CR>
-
+"inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
  "F2: Comment selected Block with #'s
  map <F2> :s/^\(.*\)$/#\1/g<CR>
