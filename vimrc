@@ -1,5 +1,8 @@
 execute pathogen#infect()
+
 set path+=**
+
+set tags+=~/tags/$project,
 
 " ------------------------------------
 "   Plugins Settings
@@ -26,7 +29,7 @@ set rtp+=~/.fzf
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_color_change_percent  = 3
-let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_enable_on_vim_startup = 1
 
 " ------------------------------------
 "  Layout/Display/Editing
@@ -143,4 +146,7 @@ endfunction
 
  " F6: File list
  map <silent> <F6> :NERDTreeToggle<CR>
+
+ " F12: SVN diff
+ map <silent> <F12> :VCSVimDiff<CR>
 
