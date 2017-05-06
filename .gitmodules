@@ -40,3 +40,9 @@
 [submodule "vim/bundle/vim-indent-guides"]
 	path = vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "term_solarized/gnome-terminal-colors-solarized"]
+	path = term_solarized/gnome-terminal-colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "term_solarized/dircolors-solarized"]
+	path = term_solarized/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
