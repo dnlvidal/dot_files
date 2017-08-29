@@ -17,7 +17,7 @@ set tags+=~/tags/$project,
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#branch#use_vcscommand = 1
@@ -43,8 +43,9 @@ set scrolloff=5
 set showmatch
 
 "set t_Co=256
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "let g:gruvbox_contrast_light='hard'
+let g:solarized_contrast="high"
 colorscheme solarized
 set background=light
 
@@ -68,16 +69,10 @@ au BufRead Makefile.* set noet
 "--- special/invisible characters settings
 
 set list
-if has('gui_running')
-  set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
-  let &showbreak = '↳'
-else
-  set list listchars=tab:>-,nbsp:.,trail:.,extends:>,precedes:<
-  let &showbreak = '^'
-endif
-if filereadable(".vimrc.proj")
-  source .vimrc.proj
-endif
+set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
+let &showbreak = '↳'
+"set list listchars=tab:>-,nbsp:.,trail:.,extends:>,precedes:<
+"let &showbreak = '^'
 
 " ------------------------------------
 "  Syntax/Completion
@@ -131,22 +126,22 @@ function! Smart_TabComplete()
 endfunction
 "inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
- "F2: Comment selected Block with #'s
- map <F2> :s/^\(.*\)$/#\1/g<CR>
+"F2: Comment selected Block with #'s
+map <F2> :s/^\(.*\)$/#\1/g<CR>
 
- " F3: Uncomment selected Block thats commented with #'s
- map <F3> :s/^#//g<CR>
+" F3: Uncomment selected Block thats commented with #'s
+map <F3> :s/^#//g<CR>
 
- " F4: Buffer list
- map <silent> <F4> :BufExplorer<CR>
+" F4: Buffer list
+map <silent> <F4> :BufExplorer<CR>
 
- " F5: Tag list
- imap <silent> <F5> :Tlist<CR>
- map <silent> <F5> :Tlist<CR>
+" F5: Tag list
+imap <silent> <F5> :Tlist<CR>
+map <silent> <F5> :Tlist<CR>
 
- " F6: File list
- map <silent> <F6> :NERDTreeToggle<CR>
+" F6: File list
+map <silent> <F6> :NERDTreeToggle<CR>
 
- " F12: SVN diff
- map <silent> <F12> :VCSVimDiff<CR>
+" F12: SVN diff
+map <silent> <F12> :VCSVimDiff<CR>
 

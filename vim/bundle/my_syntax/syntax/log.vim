@@ -20,10 +20,10 @@ syn match info ".*Info.*"
 syn match info "^Info.*"
 
 " Highlight colors for log levels.
-hi error ctermfg=Red ctermbg=Black
-hi warn ctermfg=Yellow ctermbg=Black
-hi info ctermfg=Green ctermbg=Black
+hi error ctermfg=Red
+hi warn ctermfg=Yellow
+hi info ctermfg=Green
 
 let b:current_syntax = "log"
 
-" vim: ts=2 sw=2 
+" vim: ts=2 sw=2
