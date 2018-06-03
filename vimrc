@@ -46,6 +46,9 @@ set showmatch
 "let g:solarized_termcolors=256
 "let g:gruvbox_contrast_light='hard'
 let g:solarized_contrast="high"
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
 colorscheme solarized
 set background=light
 
@@ -69,10 +72,14 @@ au BufRead Makefile.* set noet
 "--- special/invisible characters settings
 
 set list
-set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
+"set list listchars=tab:▶‒,nbsp:∙,trail:∙,extends:▶,precedes:◀
+set list listchars=tab:▶▶,nbsp:∙,trail:∙,extends:▶,precedes:◀
 let &showbreak = '↳'
 "set list listchars=tab:>-,nbsp:.,trail:.,extends:>,precedes:<
 "let &showbreak = '^'
+
+"--- Command autocompletion (TAB)
+set wildmode=longest,list,full
 
 " ------------------------------------
 "  Syntax/Completion
@@ -88,12 +95,18 @@ filetype plugin indent on
 "Cadence error format
 set errorformat+=%.%#:\ *%t\\,%.%#\ %#\(%f\\,%l\|%c\):\ %m
 set errorformat+=%.%#:\ *%t\\,%.%#\ %#\(%f\\,%l\):\ %m
-" Multi-line error messages
-set errorformat+=%A%.%#\ *%t\\,%.%#:\ %m,%ZFile:\ %f\\,\ line\ =\ %l\\,\ pos\ =\ %c
-" Ignore Warning level formats
-if (!exists("g:verilog_efm_level") || g:verilog_efm_level == "error")
-  set errorformat^=%-G%.%#\ *W\\,%.%#:\ %m
-endif
+"" Multi-line error messages
+"set errorformat+=%A%.%#\ *%t\\,%.%#:\ %m,%ZFile:\ %f\\,\ line\ =\ %l\\,\ pos\ =\ %c
+"" Ignore Warning level formats
+"if (!exists("g:verilog_efm_level") || g:verilog_efm_level == "error")
+"  set errorformat^=%-G%.%#\ *W\\,%.%#:\ %m
+"endif
+
+" ------------------------------------
+"  Buffers
+" ------------------------------------
+set bufhidden=hide
+set hidden
 
 " ------------------------------------
 "  Key binding
