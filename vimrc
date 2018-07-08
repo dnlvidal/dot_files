@@ -31,6 +31,25 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_color_change_percent  = 3
 "let g:indent_guides_enable_on_vim_startup = 1
 
+"Schelepp (Visual drag)
+
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
+
+vmap <unique> K       <Plug>SchleppUp
+vmap <unique> J       <Plug>SchleppDown
+vmap <unique> H       <Plug>SchleppLeft
+vmap <unique> L       <Plug>SchleppRight
+
+vmap <unique> i <Plug>SchleppToggleReindent
+
+vmap <unique> Dk <Plug>SchleppDupUp
+vmap <unique> Dj <Plug>SchleppDupDown
+vmap <unique> Dh <Plug>SchleppDupLeft
+vmap <unique> Dl <Plug>SchleppDupRight
+
 " ------------------------------------
 "  Layout/Display/Editing
 " ------------------------------------
@@ -80,6 +99,9 @@ let &showbreak = '↳'
 
 "--- Command autocompletion (TAB)
 set wildmode=longest,list,full
+
+"--- Visual square selection
+set virtualedit=block,onemore
 
 " ------------------------------------
 "  Syntax/Completion

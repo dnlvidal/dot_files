@@ -67,3 +67,6 @@
 [submodule "vim/bundle/vim-vinegar"]
 	path = vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vim/bundle/vim-schlepp"]
+	path = vim/bundle/vim-schlepp
+	url = https://github.com/zirrostig/vim-schlepp.git
