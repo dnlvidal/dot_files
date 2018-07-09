@@ -20,7 +20,7 @@ set tags+=~/tags/$project,
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#branch#use_vcscommand = 1
+"let g:airline#extensions#branch#use_vcscommand = 1
 
 " load FZF plugin
 set rtp+=~/.fzf
@@ -32,23 +32,23 @@ let g:indent_guides_color_change_percent  = 3
 "let g:indent_guides_enable_on_vim_startup = 1
 
 "Schelepp (Visual drag)
-
-vmap <unique> <up>    <Plug>SchleppUp
-vmap <unique> <down>  <Plug>SchleppDown
-vmap <unique> <left>  <Plug>SchleppLeft
-vmap <unique> <right> <Plug>SchleppRight
-
-vmap <unique> K       <Plug>SchleppUp
-vmap <unique> J       <Plug>SchleppDown
-vmap <unique> H       <Plug>SchleppLeft
-vmap <unique> L       <Plug>SchleppRight
-
-vmap <unique> i <Plug>SchleppToggleReindent
-
-vmap <unique> Dk <Plug>SchleppDupUp
-vmap <unique> Dj <Plug>SchleppDupDown
-vmap <unique> Dh <Plug>SchleppDupLeft
-vmap <unique> Dl <Plug>SchleppDupRight
+"vmap <unique> <up>    <Plug>SchleppUp
+"vmap <unique> <down>  <Plug>SchleppDown
+"vmap <unique> <left>  <Plug>SchleppLeft
+"vmap <unique> <right> <Plug>SchleppRight
+"vmap <unique> K       <Plug>SchleppUp
+"vmap <unique> J       <Plug>SchleppDown
+"vmap <unique> H       <Plug>SchleppLeft
+"vmap <unique> L       <Plug>SchleppRight
+"vmap <unique> i <Plug>SchleppToggleReindent
+"vmap <unique> Dk <Plug>SchleppDupUp
+"vmap <unique> Dj <Plug>SchleppDupDown
+"vmap <unique> Dh <Plug>SchleppDupLeft
+"vmap <unique> Dl <Plug>SchleppDupRight
+"
+let g:verilog_syntax_fold_lst = "class,function,task"
+"let g:verilog_efm_uvm_lst = "fatal,error,warning"
+set foldmethod=syntax
 
 " ------------------------------------
 "  Layout/Display/Editing
@@ -177,6 +177,24 @@ map <silent> <F5> :Tlist<CR>
 " F6: File list
 map <silent> <F6> :NERDTreeToggle<CR>
 
-" F12: SVN diff
+" F12: SVN diff 
 map <silent> <F12> :VCSVimDiff<CR>
+
+function! Shift_regs()
+  let @1=@2
+  let @2=@3
+  let @3=@4
+  let @4=@5
+  let @5=@6
+  let @6=@7
+  let @7=@8
+  let @8=@9
+  let @9="empty"
+endfunction
+
+function! Disp_regs()
+  reg 1 2 3 4 5 6 7 8 9
+endfunction
+
+nmap <Leader>p "1p :call Shift_regs()<CR> :call Disp_regs() <CR>
 

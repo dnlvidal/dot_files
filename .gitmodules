@@ -13,9 +13,6 @@
 [submodule "vim/bundle/verilog_systemverilog.vim"]
 	path = vim/bundle/verilog_systemverilog.vim
 	url = https://github.com/vhda/verilog_systemverilog.vim.git
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
