@@ -46,7 +46,7 @@ let g:indent_guides_color_change_percent  = 3
 "vmap <unique> Dh <Plug>SchleppDupLeft
 "vmap <unique> Dl <Plug>SchleppDupRight
 "
-let g:verilog_syntax_fold_lst = "class,function,task"
+let g:verilog_syntax_fold_lst = "class,function,task,module"
 "let g:verilog_efm_uvm_lst = "fatal,error,warning"
 set foldmethod=syntax
 
